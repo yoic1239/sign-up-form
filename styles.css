@@ -58,4 +58,88 @@
 
 .right {
   flex: 1;
+  background-color: #F9FAFB;
+}
+
+form > div {
+  padding: 0 5%;
+}
+
+div.intro {
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding-block: 60px;
+}
+
+.form-content {
+  background-color: #FFFFFF;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 0px 5px 5px #DDD;
+  padding-block: 30px;
+}
+
+.form-content > p {
+  width: 100%;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.form-element {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  margin-right: 10%;
+  padding-top: 15px;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+input {
+  border: #E5E7EB 1px solid;
+  border-radius: 3px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  padding: 3px 7px;
+}
+
+.form-content ~ div {
+  padding-top: 35px;
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  padding: 15px 50px;
+  background-color: #596D48;
+  color: #FFF;
+  font-size: 1rem;
+  font-weight: bold;
+  display: block;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+a {
+  color: #596D48;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+label:has(+input:required)::after {
+  content: ' *';
+  color: red;
+}
+
+input:invalid {
+  border: red 1px solid;
+}
+
+input[type='password']:invalid + span::after {
+  content: '* Invalid password';
+  color: red;
+  font-weight: normal;
 }
